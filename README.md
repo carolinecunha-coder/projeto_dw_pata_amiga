@@ -1,18 +1,15 @@
-# SCTEC Pata Amiga — Data Warehouse
+# Pata Amiga — Data Warehouse
 
 ## Sobre o projeto
 
-Este projeto apresenta a construção de um Data Warehouse para análise
-dos pedidos da rede Pata Amiga, utilizando modelagem dimensional,
-processos de tratamento e padronização dos dados e consultas SQL
-orientadas às perguntas de negócio propostas.
+A Pata Amiga é uma rede catarinense de pet shops. Começou com uma loja em Blumenau, em 2009, e atualmente possui 32 lojas espalhadas pelo estado, de Itapoá a São Miguel do Oeste.
+
+Este projeto apresenta a construção de um Data Warehouse para análise dos dados de pedidos da rede Pata Amiga, utilizando modelagem dimensional, processos de tratamento e padronização dos dados e consultas SQL orientadas às cinco perguntas de negócio propostas.
+
 
 ## Objetivo
 
-Construir uma base analítica capaz de transformar os dados
-operacionais de pedidos em informações para apoiar decisões
-sobre logística, vendas, canais, distribuição regional e expansão
-da rede.
+Construir uma base analítica capaz de transformar os dados operacionais de pedidos em informações para apoiar decisões sobre logística, vendas, canais, distribuição regional e expansão da rede.
 
 ## Perguntas de negócio
 
