@@ -74,6 +74,8 @@ fonte para as transformações necessárias à construção do Data Warehouse.
 Os nomes das lojas foram tratados com remoção de variações de grafia,
 padronização para maiúsculas e normalização de caracteres.
 
+A padronização foi realizada antes do lookup na dimensão de lojas, garantindo que as diferentes grafias da origem fossem comparadas com o nome padronizado.
+
 Também foram realizadas correções manuais identificadas durante a
 análise dos dados de origem:
 
@@ -127,13 +129,13 @@ quando uma descrição contém mais de um termo identificador.
 
 ### Tratamento de datas e valores numéricos
 
-As datas de origem foram convertidas para o formato adequado durante a
-carga da tabela fato, respeitando as máscaras correspondentes aos
-formatos encontrados na origem.
+As datas de pedido foram convertidas a partir do formato americano
+`MM/DD/YYYY HH12:MI AM`, enquanto os quatro marcos do processo de entrega
+foram tratados a partir do formato `YYYY-MM-DD`.
 
-Os valores numéricos também foram padronizados durante a carga, tratando
-as diferentes representações de números e valores monetários presentes
-nos dados de origem.
+Os valores numéricos e monetários foram padronizados durante a carga,
+considerando as diferentes representações presentes na origem. Valores
+vazios ou iguais a `-` foram gravados como `NULL`, nunca como zero.
 
 
 ### Tratamento de informações ausentes
