@@ -22,6 +22,7 @@ WHERE fp.dias_total_ate_entrega IS NOT NULL
 GROUP BY dl.porte
 ORDER BY dl.porte;
 
+
 -- RESULTADO DA CONSULTA:
 --
 -- Os valores abaixo representam TEMPO MÉDIO, EM DIAS, para os
@@ -49,7 +50,7 @@ ORDER BY dl.porte;
 --   15,16 dias = tempo total médio entre integração e entrega ao cliente.
 --
 -- GRÁFICO NO GITHUB:
--- https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P1_tempo_medio_por_porte.png
+-- GRÁFICO: https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P1_tempo_medio_por_porte.png
 --
 -- ANÁLISE / RESPOSTA:
 -- A etapa que apresenta o maior tempo médio e, portanto, caracteriza
@@ -108,6 +109,7 @@ ORDER BY
     dl.porte,
     faturamento DESC;
 
+
 -- RESULTADO DA CONSULTA:
 --
 -- Os valores representam FATURAMENTO LÍQUIDO por categoria e a
@@ -148,7 +150,7 @@ ORDER BY
 --   Pequena: R$ 164.197,55 de faturamento com Racao.
 --
 -- GRÁFICO NO GITHUB:
--- https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P2_faturamento_por_categoria.png
+-- GRÁFICO: https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P2_faturamento_por_categoria.png
 --
 -- ANÁLISE / RESPOSTA:
 -- A categoria Racao concentra a maior parcela do faturamento:
@@ -210,6 +212,7 @@ AND vl_liquido IS NOT NULL
 GROUP BY canal_pedido
 ORDER BY faturamento DESC;
 
+
 -- RESULTADO DA CONSULTA:
 --
 -- Os valores de ticket médio representam o VALOR LÍQUIDO MÉDIO
@@ -244,7 +247,7 @@ ORDER BY faturamento DESC;
 --   Telefone:    R$ 123.419,29 — 7,37%
 --
 -- GRÁFICO NO GITHUB:
--- https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P3_faturamento_por_canal.png
+-- GRÁFICO: https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P3_faturamento_por_canal.png
 --
 -- ANÁLISE / RESPOSTA:
 -- Em todos os cinco canais analisados, o ticket médio dos pedidos
@@ -309,6 +312,7 @@ GROUP BY
     dp.domicilios_com_pet
 ORDER BY faturamento_alocado DESC;
 
+
 -- RESULTADO DA CONSULTA:
 --
 -- Os valores representam FATURAMENTO ALOCADO POR PRAÇA.
@@ -339,7 +343,7 @@ ORDER BY faturamento_alocado DESC;
 -- informada para cada praça na dimensão de praça.
 --
 -- GRÁFICO NO GITHUB:
--- https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P4_faturamento_por_praca.png
+-- GRÁFICO: https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P4_faturamento_por_praca.png
 --
 -- ANÁLISE / RESPOSTA:
 -- A praça Vale do Itajai apresenta o maior faturamento alocado,
@@ -411,6 +415,7 @@ SELECT
     COUNT(*) FILTER (WHERE fp.vl_liquido IS NULL) AS valores_nao_informados
 FROM fato_pedido fp;
 
+
 -- RESULTADO DA CONSULTA:
 --
 -- A métrica itens_por_mil_habitantes significa a quantidade total
@@ -443,7 +448,7 @@ FROM fato_pedido fp;
 -- 121 registros = pedidos em que o valor líquido não foi informado.
 --
 -- GRÁFICO NO GITHUB:
--- https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P5_itens_por_mil_habitantes.png
+-- GRÁFICO: https://github.com/carolinecunha-coder/projeto_dw_pata_amiga/blob/main/graficos/P5_itens_por_mil_habitantes.png
 --
 -- ANÁLISE / RESPOSTA:
 -- Rio dos Cedros é a recomendação para uma possível nova loja porque
